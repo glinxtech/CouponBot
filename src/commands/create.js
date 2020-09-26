@@ -7,8 +7,11 @@
  * 4. Let user know coupon was created
  * Example: ~create kiss
  */
-module.exports = function createCommand({ msg, db }, name) {
-
+module.exports = async function createCommand({ msg, db }, name) {
+	if (!name) {
+        // Required, string is empty or full of empty space
+    }
+    const users = await db('users').where('name', name);
 	/* const couponName = JSON.stringify({ ...name }); */
 
 	msg.channel.send(`Coupon with name ${name} created.`);

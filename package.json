@@ -1,0 +1,40 @@
+{
+  "name": "@superchet/discord-coupon-bot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src",
+    "dev": "NODE_ENV=development nodemon --inspect src",
+    "test": "npm run test:eslint && npm run test:unit",
+    "test:eslint": "eslint src",
+    "test:unit": "NODE_ENV=test jest",
+    "clean": "rm -f *.sqlite3 node_modules && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glinxtech/SuperCatsDiscordBot.git"
+  },
+  "keywords": [],
+  "author": "Grep Linkles <iamabigpoopoohead@aol.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glinxtech/SuperCatsDiscordBot/issues"
+  },
+  "homepage": "https://github.com/glinxtech/SuperCatsDiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "knex": "^0.21.5",
+    "knex-stringcase": "^1.4.3",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4"
+  }
+}
